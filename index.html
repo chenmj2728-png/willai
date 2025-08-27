@@ -1,13 +1,40 @@
 <!doctype html>
 <html lang="zh-Hant">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>澳洲買房｜任務定義可視化選單</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WillDataAI • AU Homebuying Wizard v3</title>
+  <meta name="description" content="澳洲買房預批、文件清單與任務導覽"/>
+  <style>
+    :root { --bg:#0b1020; --panel:#121a32; --muted:#9bb0c9; --brand:#7ac7ff; --ok:#32d583; --warn:#ffd166; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+           background: radial-gradient(1200px 1200px at 80% -10%, #193766 0%, var(--bg) 40%), var(--bg); color:#e6eef7; }
+    header { padding:24px 20px; text-align:center; border-bottom:1px solid #1f2a49; }
+    h1 { margin:0; font-size:24px; letter-spacing:.5px; }
+    .wrap { max-width: 1000px; margin: 20px auto 64px; padding: 0 16px; }
+    .grid { display:grid; gap:16px; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); }
+    .card { background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02)); border:1px solid #22335c;
+            border-radius:16px; padding:16px 16px 12px; backdrop-filter: blur(6px); }
+    .card h2 { font-size:18px; margin:4px 0 8px; }
+    .muted { color: var(--muted); font-size: 13px; }
+    .pill { display:inline-flex; align-items:center; gap:6px; padding:2px 10px; border-radius:999px; font-size:12px;
+            border:1px solid #2b3e73; background:#0c1732; color:#d9e6ff; }
+    .ok { color: #0d2; }
+    .btn { display:inline-flex; align-items:center; gap:8px; padding:10px 14px; border-radius:10px; border:1px solid #27406e;
+           background:#0e2446; color:#d9e6ff; text-decoration:none; cursor:pointer; }
+    .btn:hover{ background:#0f2a52; }
+    details { border:1px dashed #2c4276; border-radius:10px; padding:10px 12px; background:#0f1a32; }
+    details summary { cursor:pointer; font-weight:600; }
+    ul.check { list-style:none; padding-left:0; }
+    ul.check li { display:flex; align-items:flex-start; gap:10px; padding:6px 0; }
+    ul.check input { margin-top:3px; }
+    .footer { margin-top: 28px; color: var(--muted); font-size: 12px; }
+    code.k { background:#07112b; border:1px solid #213764; padding:2px 6px; border-radius:6px; }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
 </html>
